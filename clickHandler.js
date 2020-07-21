@@ -1,4 +1,4 @@
-let randomNumbers = [1,1,2,2,3,3,4,4,5,5];
+let randomNumbers = [1,1,2,2,3,3,4,4,5,5,6,6];
 shuffleArray(randomNumbers);
 let flippedCards = 0;
 let card = $(".card");
@@ -9,8 +9,8 @@ card.click(function(event){
 
   if (flippedCards == 0){
       if(!event.target.classList.contains("flipped")){
-        $(this).html(randomNumbers[id]);
-        numberOfClickedCard = randomNumbers[id];
+        $(this).html(randomNumbers[(id-1)]);
+        numberOfClickedCard = randomNumbers[(id-1)];
         idOfClickedCard = id;
         flippedCards++;
         event.target.classList.add("flipped");
@@ -20,10 +20,10 @@ card.click(function(event){
   } else
   if (flippedCards == 1){
       if(!event.target.classList.contains("flipped")){
-        $(this).html(randomNumbers[id]);
+        $(this).html(randomNumbers[(id-1)]);
         flippedCards++;
         event.target.classList.add("flipped");
-        if (randomNumbers[id] == numberOfClickedCard) {
+        if (randomNumbers[(id-1)] == numberOfClickedCard) {
           console.log("true");
           numberOfClickedCard = undefined;
           idOfClickedCard = undefined;

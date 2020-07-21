@@ -1,0 +1,22 @@
+body {
+  background:#3bcc62 ;
+}
+#a {
+  background: lightgrey;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  right: 40px;
+
+}
+.card {
+  background-color: grey;
+  border: 1px solid black;
+  height: 300px;
+  width: 300px;
+  vertical-align: bottom;
+}
+.card:hover{
+  background-color: pink;
+
+}

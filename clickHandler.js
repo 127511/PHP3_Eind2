@@ -1,12 +1,12 @@
-let randomNumbers = [1,2,5,4,3,1,5,4,2,3];
+let randomNumbers = [1,1,2,2,3,3,4,4,5,5];
+shuffleArray(randomNumbers);
 let flippedCards = 0;
 let card = $(".card");
 let numberOfClickedCard;
 let idOfClickedCard;
-randomNumbers
 card.click(function(event){
   var id = event.target.id;
-  // test
+
   if (flippedCards == 0){
       if(!event.target.classList.contains("flipped")){
         $(this).html(randomNumbers[id]);
@@ -21,22 +21,23 @@ card.click(function(event){
   if (flippedCards == 1){
       if(!event.target.classList.contains("flipped")){
         $(this).html(randomNumbers[id]);
+        flippedCards++;
+        event.target.classList.add("flipped");
         if (randomNumbers[id] == numberOfClickedCard) {
           console.log("true");
-          flippedCards = 0;
           numberOfClickedCard = undefined;
           idOfClickedCard = undefined;
+          flippedCards = 0;
         } else {
           console.log("false");
           setTimeout(function(){
-            flippedCards = 0;
             $("#" + idOfClickedCard).html("");
             $("#" + id).html("");
             document.getElementById(idOfClickedCard).classList.remove("flipped");
             document.getElementById(id).classList.remove("flipped");
-            flippedCards = 0;
             numberOfClickedCard = undefined;
             idOfClickedCard = undefined;
+            flippedCards = 0;
           }, 1000);
 
 
@@ -45,4 +46,14 @@ card.click(function(event){
       console.log("card is already flipped");
     }
 }
+
+
 });
+function shuffleArray(array){
+  for(let i = array.length-1; i > 0; i--){
+  const j = Math.floor(Math.random() * i);
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+}

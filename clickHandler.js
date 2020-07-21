@@ -6,7 +6,7 @@ let idOfClickedCard;
 randomNumbers
 card.click(function(event){
   var id = event.target.id;
-
+  // test
   if (flippedCards == 0){
       if(!event.target.classList.contains("flipped")){
         $(this).html(randomNumbers[id]);
@@ -45,6 +45,4 @@ card.click(function(event){
       console.log("card is already flipped");
     }
 }
-
-
 });

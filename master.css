@@ -1,5 +1,5 @@
 body {
-  background:#46644a;
+  background:#7c8d8f;
   text-align: center;
 }
 #a {
@@ -11,14 +11,18 @@ body {
 
 }
 .card {
-  background-color: #008b8b;
+  background-color: #2bdded;
   border: 1px solid black;
-  height: 220px;
-  width: 220px;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
   vertical-align: bottom;
-  margin: 4px;
+  margin: 9px;
+  font-size: 40px;
+
+
 }
 .card:hover{
-  background-color: #7bae9e;
+  background-color: #00eaff;
 
 }

@@ -14,8 +14,8 @@ body {
   background-color: #2bdded;
   border: 1px solid black;
   border-radius: 10px;
-  height: 200px;
-  width: 200px;
+  height: 95px;
+  width: 90px;
   vertical-align: bottom;
   margin: 9px;
   font-size: 40px;
@@ -25,4 +25,24 @@ body {
 .card:hover{
   background-color: #00eaff;
 
+}
+.diffButton{
+  background-color: #2bdded;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 50px;
+  width: 300px;
+  vertical-align: bottom;
+  margin: 9px;
+  font-size: 20px;
+}
+h1{
+  font-size: 300%;
+}
+h3{
+  font-size: 200%;
+}
+h1, h3{
+  font-family: arial;
+  color: white;
 }
